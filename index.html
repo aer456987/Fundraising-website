@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BS5-第二關主線任務</title>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav 
+    class="navbar navbar-expand-lg fixed-top border-bottom border-5 border-primary bg-white py-3">
+    <div class="container p-sm-0">
+      <!-- nav內容 -->
+      <div class="container-fluid">
+        <div class="row align-items-sm-top align-items-md-center">
+          <div class="col-3 col-sm-3 col-md-2 col-lg-1">
+            <a class="navbar-brand" href="#">
+              <img 
+                src="https://hexschool.github.io/boootstrap5WebLayout/assets/logo.jpg" 
+                alt="logo圖"
+                class="nav_img d-inline-block align-text-top w-100">
+            </a>
+          </div>
+
+          <div class="col-9 col-sm-9 col-md-10 col-lg-11">
+            <div class="d-flex justify-content-end navbar-light">
+              <button 
+                class="humburger navbar-toggler align-self-start py-2" 
+                type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+
+            <div 
+              class="collapse navbar-collapse" 
+              id="navbarNav">
+              <div class="row align-items-center flex-wrap text-end w-100 px-md-0 px-lg-3">
+
+                <div class="col-md-6 col-lg-8">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">關於</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">挖寶</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">我有個大膽的想法</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex justify-content-end p-0">
+                  <button class="js_loginBtn main_btn btn btn-primary rounded-pill mx-2 px-4">登入</button>
+                  <button class="btn btn-outline-gary rounded-pill border-2 ms-3 px-4 secondary_btn">註冊</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </nav>
+
+  <!-- 登入 Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 border-top border-4 border-primary">
+        <div class="modal-header">
+          <div class="container d-flex align-items-center">
+            <h3 class="modal-title fs-2 fw-bold text-black" id="loginModalLabel">登入</h3>
+            <button type="button" class="btn-close" 
+              data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="container">
+            <div class="mb-3">
+              <label for="loginId" class="form-label text-black">帳號</label>
+              <input id="loginId" type="text" class="form-control bg-light border-0">
+
+            </div>
+            <div class="mb-2">
+              <label for="loginPw" class="form-label text-black">密碼</label>
+              <input id="loginPw" type="password" 
+              class="form-control bg-light border-0">
+            </div>
+            <a href="#" 
+              class="text-gary fs-6 fw-normal">忘記密碼？</a> <br>
+
+            <button class="btn btn-primary btn-lg main_btn rounded-pill w-100 mb-5 mt-3">登入</button>
+
+            <div class="row text-gary fs-6 align-items-center">
+              <div class="col-3">
+                <hr>
+              </div>
+              <div class="col-6 p-0 text-center fw-normal">
+                <span>
+                  還沒有帳號？
+                  <a href="#" 
+                    class="link-secondary">註冊一個帳號</a>
+                </span>
+              </div>
+              <div class="col-3">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="bg-light">
+    <div class="container mt-5 pt-5 pb-4 py-md-5">
+      <span class="badge bg-gary m-2">魔法科學</span>
+      <h1 class="fw-bold mb-3">
+        拍出會動的照片｜LivePhotos 魔法拍立得
+      </h1>
+
+      <div class="row">
+        <div class="col-lg-7 mt-0 mb-3">
+          <img 
+            src="https://hexschool.github.io/boootstrap5WebLayout/assets/produt_image.jpg" 
+            alt="商品主圖"
+            class="w-100 rounded-3">
+        </div>
+        <div class="col-lg-5 my-2">
+          <span class="fs-6 text-light-gary-500 m-0 pb-1">目標 $600,000</span>
+          <p class="mb-3 fs-1 fw-bold">$280,047</p>
+
+          <div class="progress rounded-pill mb-1">
+            <div class="progress-bar" 
+              role="progressbar" 
+              aria-valuemin="0" aria-valuemax="100" 
+              aria-valuenow="41"
+              >41%
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="fs-1 m-0">
+                <span class="fs-6 m-0 text-light-gary-500">
+                  贊助人數
+                </span> <br>
+                1374 人
+              </p>
+            </div>
+            <div class="col">
+              <p class="fs-1 m-0">
+                <span class="fs-6 m-0 text-light-gary-500">募資倒數</span> <br>
+                27 天
+              </p>
+            </div>
+          </div>
+
+          <ul class="js_icons_contnet d-flex justify-content-md-start justify-content-around pt-2 pb-3">
+            <!-- JS渲染 -->
+          </ul>
+
+          <p class="p-3 rounded-2 border-start border-3 border-primary text-gary bg-white">
+            專案募資中！<br>
+            在 <strong>2021/06/14 23:59</strong> 募資結束前，您都可以贊助我們！
+          </p>
+
+          <button class="btn btn-primary btn-lg main_btn rounded-pill w-100 mb-2">
+            贊助專案</button>
+          <div class="row">
+            <div class="col-7">
+              <button 
+                class="btn btn-outline-gary btn-lg secondary_btn border-2 rounded-pill w-100 my-1">
+                <span><i class="fas fa-heart"></i></span>
+                追蹤專案
+              </button>
+            </div>
+
+            <div class="col-5">
+              <button 
+                class="btn btn-outline-gary btn-lg secondary_btn border-2 rounded-pill w-100 my-1" >
+                <span><i class="fas fa-share-alt"></i></span>
+                分享
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 頁籤 -->
+  <nav class="border-bottom mb-4">
+    <div class="container">
+      <ul class="nav d-flex justify-content-between justify-content-md-start" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="tabs_btn active" value="專案介紹" 
+            data-bs-target="#project" type="button" role="tab" 
+            aria-controls="project" aria-selected="true"
+            >專案介紹</button>
+        </li>
+
+        <!-- 常見問答 -->
+        <li class="nav-item" role="presentation">
+          <button class="tabs_btn" value="常見問答" 
+            data-bs-target="#problem" type="button" role="tab" 
+            aria-controls="problem" aria-selected="false"
+            >常見問答</button>
+        </li>
+
+        <!-- 目前進度 -->
+        <li class="nav-item" role="presentation">
+          <button class="tabs_btn" value="目前進度" 
+            data-bs-target="#schedule" type="button" role="tab" 
+            aria-controls="schedule" aria-selected="false"
+            >目前進度</button>
+        </li>
+
+        <!-- 留言 -->
+        <li class="nav-item" role="presentation">
+          <button class="tabs_btn" value="留言" 
+            data-bs-target="#message" type="button" role="tab" 
+            aria-controls="message" aria-selected="false"
+            >留言</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 文章主區塊 -->
+  <content class="main">
+    <div class="container">
+      <section class="row mb-5">
+        <main class="col-md-7 col-lg-8 pe-lg-3 mb-4 mb-md-5">
+
+          <section class="tab-content mb-4">
+            <ul class="js_project_content tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
+              <!-- JS渲染 -->
+            </ul>
+
+            <div class="tab-pane fade" id="problem" role="tabpanel" aria-labelledby="problem-tab">
+              <ul class="js_accordion_content accordion mb-5" id="accordion">
+                <!-- JS渲染 -->
+              </ul>
+            </div>
+
+            <ul class="js_schedule_contnet tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+              <!-- JS渲染 -->
+            </ul>
+
+            <div class="tab-pane fade" id="message" role="tabpanel" aria-labelledby="message-tab">
+              <p class="d-none d-md-block mb-4 p-3 rounded-2 border-start border-3 border-primary text-gary bg-white fs-6">
+                只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎
+                <a href="#" class="link-secondary">聯絡提案人</a>！
+              </p>
+              <ul class="js_message_contnet">
+                <!-- JS渲染 -->
+              </ul>
+            </div>
+          </section>
+
+          <!-- md 才有 - 贊助表單 -->
+          <section class="d-none d-md-block">
+            <div class="mb-3">
+              <div class="row justify-content-center">
+                <div class="col-4 d-flex justify-content-center">
+                  <img 
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_heart.svg" 
+                  alt="贊助方案">
+                </div>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-4 col-md-5">
+                  <div class="border-top border-3 border-primary my-auto"></div>
+                </div>
+                <div class="col-4 col-md-2 d-flex flex-column align-items-center p-0">
+                  <h5 class="m-0 fw-bold fs-4">贊助方案</h5>
+                </div>
+                <div class="col-4 col-md-5">
+                  <div class="border-top border-3 border-primary my-auto"></div>
+                </div>
+              </div>
+            </div>
+
+            <form class="js_needs_validation py-2" novalidate>
+              <label for="mdProgram" class="form-label text-black">贊助方案</label>
+              <select id="mdProgram" class="form-select mb-2 py-2 ps-3 bg-light-gary-100 border-0"
+                aria-label="Default select example"
+                required>
+                <option disabled selected>請選擇一個方案</option>
+                <option value="方案一">方案一</option>
+                <option value="方案二">方案二</option>
+                <option value="方案三">方案三</option>
+              </select>
+              <p class="invalid-feedback pt-1 text-secondary">請選擇一個方案</p>
+
+              <label for="mdName" class="form-label text-black">收件人姓名</label>
+              <input id="mdName" type="text" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+              <p class="invalid-feedback pt-1 text-secondary">請輸入正確的收件人姓名</p>
+
+              <label for="mdTel" class="form-label text-black">聯絡電話</label>
+              <input id="mdTel" type="tel" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+              <p class="invalid-feedback pt-1 text-secondary">請輸入正確的聯絡電話</p>
+
+              <label for="mdEmail" class="form-label text-black">連絡信箱</label>
+              <input id="mdEmail" type="email" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+              <p class="invalid-feedback pt-1 text-secondary">請輸入正確的郵件格式</p>
+
+              <label for="mdPay" class="form-label text-black">付款方式</label>
+              <select id="mdPay" class="form-select mb-2 py-2 ps-3  bg-light-gary-100 border-0" 
+                aria-label="Default select example"
+                required>
+                <option value="貨到付款">貨到付款</option>
+                <option value="信用卡付款" selected>信用卡付款</option>
+                <option value="ATM">ATM 匯款</option>
+              </select>
+
+              <div class="row justify-content-md-center">
+                <div class="col-md-6 col-lg-4">
+                  <button type="submit" class="btn btn-primary btn-lg w-100 main_btn rounded-pill my-2 px-5">贊助專案</button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </main>
+
+        <aside class="col-md-5 col-lg-4 ps-lg-4 mb-4 mb-md-0">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex mb-3">
+                <img 
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/store_img.jpg" 
+                  alt="頭像">
+                <div class="m-3">
+                  <h2 class="card-title fs-3 fw-bold mb-2">缺錢事務所</h2>
+                  <p class="text-black fw-normal">已發起 1 個專案</p>
+                </div>
+              </div>
+              <p class="text-black">需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！</p>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <a href="#" class="me-2">
+                    <i class="fab fa-facebook-f icon_sm bg-gary"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-youtube icon_sm bg-gary"></i>
+                  </a>
+                </div>
+
+                <button class="btn btn-outline-gary btn-sm secondary_btn rounded-pill px-3">
+                  <i class="far fa-comment-dots"></i>
+                  聯絡我們
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 
+              class="mb-3 p-2 border-start border-end border-4 border-primary rounded bg-light fs-3 fw-bold text-center">
+              選擇一個方案來支持
+            </h2>
+            <ul class="js_sponsor_contnet">
+              <!-- JS 渲染 -->
+            </ul>
+          </div>
+        </aside>
+
+        <!--SM才有 - 贊助方案表單 -->
+        <section class="col-lg-8 d-sm-block d-md-none">
+          <div class="mb-3">
+            <div class="row justify-content-center">
+              <div class="col-4 d-flex justify-content-center">
+                <img 
+                src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_heart.svg" 
+                alt="贊助方案">
+              </div>
+            </div>
+
+            <div class="row align-items-center">
+              <div class="col-4 col-md-5">
+                <div class="border-top border-3 border-primary my-auto"></div>
+              </div>
+              <div class="col-4 col-md-2 d-flex flex-column align-items-center p-0">
+                <h5 class="m-0 fw-bold fs-4">贊助方案</h5>
+              </div>
+              <div class="col-4 col-md-5">
+                <div class="border-top border-3 border-primary my-auto"></div>
+              </div>
+            </div>
+          </div>
+
+          <form id="sponsorForm" class="js_needs_validation py-2" novalidate>
+            <label for="smProgram" class="form-label text-black">贊助方案</label>
+            <select id="smProgram" class="form-select mb-2 py-2 ps-3 bg-light-gary-100 border-0"
+              aria-label="Default select example"
+              required>
+              <option disabled selected>請選擇一個方案</option>
+              <option value="方案一">方案一</option>
+              <option value="方案二">方案二</option>
+              <option value="方案三">方案三</option>
+            </select>
+            <p class="invalid-feedback pt-1 text-secondary">請選擇一個方案</p>
+
+            <label for="smName" class="form-label text-black">收件人姓名</label>
+            <input id="smName" type="text" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+            <p class="invalid-feedback pt-1 text-secondary">請輸入正確的收件人姓名</p>
+
+            <label for="smTel" class="form-label text-black">聯絡電話</label>
+            <input id="smTel" type="tel" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+            <p class="invalid-feedback pt-1 text-secondary">請輸入正確的聯絡電話</p>
+
+            <label for="smEmail" class="form-label text-black">連絡信箱</label>
+            <input id="smEmail" type="email" class="form-control mb-2 py-2 ps-3  bg-light-gary-100 border-0" required>
+            <p class="invalid-feedback pt-1 text-secondary">請輸入正確的郵件格式</p>
+
+            <label for="smPay" class="form-label text-black">付款方式</label>
+            <select id="smPay" class="form-select mb-2 py-2 ps-3  bg-light-gary-100 border-0" 
+              aria-label="Default select example"
+              required>
+              <option value="貨到付款">貨到付款</option>
+              <option value="信用卡付款" selected>信用卡付款</option>
+              <option value="ATM">ATM 匯款</option>
+            </select>
+
+            <div class="row justify-content-md-center">
+              <div class="col-md-6 col-lg-4">
+                <button type="submit" class="btn btn-primary btn-lg w-100 main_btn rounded-pill my-2 px-5">贊助專案</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- SM置底按鈕 -->
+        <a href="#sponsorForm" 
+          class="d-sm-block d-md-none btn btn-primary main_btn fixed-bottom w-100 border-0">
+          贊助專案
+        </a>
+      </section>
+    </div>
+  </content>
+
+  <footer class="p-4 bg-dark text-center text-white fs-5 fw-normal">
+    Copyright Ⓒ 拼拼 All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  <script src="js/all.js"></script>
+</body>
+</html>
